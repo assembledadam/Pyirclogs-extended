@@ -223,7 +223,7 @@ for channel in channels:
 def handlePubMessage(connection, event):
 	print event.target() + '> ' + event.source().split ( '!' ) [ 0 ] + ': ' + event.arguments() [ 0 ]
 	if event.arguments()[0] == '!logs':
-		server.privmsg(event.target(), "IRC logs can be found here: http://dev.pro-gmedia.com/irclogs/")
+		server.privmsg(event.target(), "IRC logs can be found here: http://dev.pro-gmedia.com:8080/irclogs/")
 
 irc.add_global_handler ( 'pubmsg', handlePubMessage )
 
